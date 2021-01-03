@@ -1,0 +1,29 @@
+{
+  "name": "tailwind-playground",
+  "version": "1.0.0",
+  "description": "Instructions to get up and running:",
+  "main": "index.js",
+  "scripts": {
+    "tw:build": "tailwindcss build ./src/css/tailwind.css -o ./public/css/tailwind.css",
+    "tw:watch": "onchange 'tailwind.config.js' 'src/**/*.css' -- npm run tw:build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Daviz00/tailwind-playground.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Daviz00/tailwind-playground/issues"
+  },
+  "homepage": "https://github.com/Daviz00/tailwind-playground#readme",
+  "dependencies": {
+    "autoprefixer": "^10.1.0",
+    "cssnano": "^4.1.10",
+    "onchange": "^7.1.0",
+    "postcss": "^8.2.2",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.0.2"
+  }
+}

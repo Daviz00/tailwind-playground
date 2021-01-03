@@ -10,8 +10,10 @@ Instructions to get up and running:
 
 4. Go and add this to the *purge* section under tailwind.config.js
 
-   mode:'layers',
-   content:['./public/**/*.html/],
+   purge: {
+    mode: 'layers',
+    content: ['./public/**/*.html/'],
+  },
 
 5. Go and change the postcss.config.js file contents to
 
@@ -28,9 +30,9 @@ Instructions to get up and running:
 
 6. mkdir src
 
-7. mkdir src.css
+7. mkdir src/css
 
-8. tuch src/css/tailwind.css
+8. touch src/css/tailwind.css
 
 9. Now add the following to the tailwind.css file under src/css
 
@@ -41,16 +43,16 @@ Instructions to get up and running:
 
 10. Now go to the package.json file and under scripts tab, remove eveything and add the following
 
-  "tw:build": "tailwindcss build ./src/css/tailwind.css -o ./public/css/tailwind.css
+  "tw:build": "tailwindcss build ./src/css/tailwind.css -o ./public/css/tailwind.css"
 
 
-11. npx run tw:build
+11. npm run tw:build
 
 12. Now add the follwing under tw:build
 
-  "tw:watch": "onchnage 'tailwind.config.js' 'src/\**/\*.css' -- npm run tw:build
+  "tw:watch": "onchange 'tailwind.config.js' 'src/\**/\*.css' -- npm run tw:build"
 
-13. npx run tw:watch
+13. npm run tw:watch
 
 14. touch public/index.html
 
